@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>  <!-- this tag uses font awesome -->
+                    <div class="logo-text">Anish Khatri</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlink">
+                        <li><a href="home.html">Home</a></li> 
+                        <li><a href="project.html">Project</a></li> 
+                        <li><a href="Resume.html">Resume</a></li> 
+                        <li><a href="contact.html">Contact</a></li> 
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/profile.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</h5>
+                        <h1>Anish Khatri</h1>
+                        <p>Hello! I'm Anish Khatri, a motivated learner with a strong interest in technology and software development. I’m currently focused on learning new programming languages and developing new technical skills to strengthen my foundation and stay updated in the fast-changing tech world.</p>
+                        <div class="btn-group">
+                            <a href="images/CV.jpg" class="btn active" download>Download CV</a>
+                            <a href="contact.html" class="btn">Contact</a>
+                        </div>
+                        <div class="social">
+                        <a href="https://www.facebook.com/share/1A3P8V1MvE/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/anishh__khatri?igsh=MTZnNTc5MmM3Mm4xbw==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://github.com/Anish777-Khatri" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anish-khatri-4902b7243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Anish Khatri. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>         
+    <script>
+       var togglebtn=document.querySelector(".togglebtn");
+       var nav=document.querySelector(".navlink");
+       var link=document.querySelector(".navlink li");
+
+       togglebtn.addEventListener("click", function(){
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+       })
+
+    var typed=new Typed(".input",{
+    strings:["Beginner","Frontend Developer","Web Developer"],
+    typedSpeed:70,
+    backSpeed:55,
+    loop:true
+})
+    </script>
+</body>
+</html>

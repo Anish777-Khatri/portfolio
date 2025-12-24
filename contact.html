@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>  <!-- this tag uses font awesome -->
+                    <div class="logo-text">Anish Khatri</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlink">
+                        <li><a href="home.html">Home</a></li> 
+                        <li><a href="project.html">Project</a></li> 
+                        <li><a href="Resume.html">Resume</a></li> 
+                        <li><a href="">Contact</a></li> 
+                    </ul>
+                </nav>
+            </header>
+            <div class="page-container">
+                <h1 class="page-title">Contact Information</h1>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <p>I'm always open to discussing new opportunities, interesting projects, or just having a friendly chat about web development. Feel free to reach out!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Email</h3>
+                                    <p>khatrianish456@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Phone</h3>
+                                    <p>+977 9745969178</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Location</h3>
+                                    <p>Bhaktapur, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social">
+                            <h3>Connect With Me</h3>
+                            <div class="contact-social-links">
+                                <a href="https://www.facebook.com/share/1A3P8V1MvE/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/anishh__khatri?igsh=MTZnNTc5MmM3Mm4xbw==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://github.com/Anish777-Khatri" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/anish-khatri-4902b7243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h2>Send Message</h2>
+                        <div id="alertMessage" class="alert"></div>
+                        
+                        <form id="contactForm" action="https://formspree.io/f/xnjarwyg" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anish Khatri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Contact Form Submission Handler
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const alertMessage = document.getElementById('alertMessage');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            
+            // Hide any previous alerts
+            alertMessage.classList.remove('show', 'alert-success', 'alert-error');
+            
+            try {
+                // Send form data to Formspree
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                // Remove loading state
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                
+                if (response.ok) {
+                    // Success
+                    showAlert('Thank you for your message! I will get back to you soon.', 'success');
+                    contactForm.reset();
+                } else {
+                    // Error
+                    showAlert('Oops! There was a problem sending your message. Please try again.', 'error');
+                }
+            } catch (error) {
+                // Network error
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                showAlert('Connection error. Please check your internet and try again.', 'error');
+            }
+        });
+
+        function showAlert(message, type) {
+            alertMessage.textContent = message;
+            alertMessage.className = `alert alert-${type} show`;
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    alertMessage.classList.remove('show');
+                }, 5000);
+            }
+        }
+
+        // Include your existing script.js functionality here if needed
+        // Or keep the script.js file linked separately
+    </script>
+        </div>
+    </div>
+</body>
+</html>

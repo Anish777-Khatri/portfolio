@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>  <!-- this tag uses font awesome -->
+                    <div class="logo-text">Anish Khatri</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlink">
+                        <li><a href="home.html">Home</a></li> 
+                        <li><a href="project.html">Project</a></li> 
+                        <li><a href="Resume.html">Resume</a></li> 
+                        <li><a href="contact.html">Contact</a></li> 
+                    </ul>
+                </nav>
+            </header>
+            <section class="hero">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Explore my collection of web development projects showcasing skills in modern technologies and frameworks.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <span>HTML5</span>
+                            </div>
+                            <span class="skill-level">Expert</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                                <span>CSS3</span>
+                            </div>
+                            <span class="skill-level">Expert</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                                <span>JavaScript</span>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <span>React</span>
+                            </div>
+                            <span class="skill-level">Beginner</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-paint-brush"></i> Styling & Frameworks</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-css3"></i></div>
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-sass"></i></div>
+                                <span>CSS</span>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
+                                <span>Bootstrap</span>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <span>Responsive Design</span>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                                <span>Git & GitHub</span>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                                <span>Figma</span>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fas fa-search"></i></div>
+                                <span>Java/OOP</span>
+                            </div>
+                            <span class="skill-level">Basic</span>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <span>C++
+                                </span>
+                            </div>
+                            <span class="skill-level">Basic</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Anish Khatri. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1A3P8V1MvE/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/anishh__khatri?igsh=MTZnNTc5MmM3Mm4xbw==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://github.com/Anish777-Khatri" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anish-khatri-4902b7243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Projects Data
+        const projects = [
+            {
+                id: 1,
+                title: "Weather-Application",
+                description: "A real-time weather application that displays current weather conditions, forecasts, and location-based weather data.",
+                image: "images/Weather.png",
+                technologies: ["Html", "JavaScript", "CSS", "Weather API"],
+                liveUrl: " https://anish777-khatri.github.io/Weather_App/",
+                githubUrl: "https://github.com/Anish777-Khatri/Weather_App"
+            },
+            {
+                id: 2,
+                title: "Memory game",
+                description: "A productivity application with drag-and-drop functionality, team collaboration, and real-time updates.",
+                image: "images/memory.png",
+                technologies: ["HTML","CSS","JavaScript"],
+                liveUrl: "https://anish777-khatri.github.io/memory-game/",
+                githubUrl: "https://github.com/Anish777-Khatri/memory-game"
+            },
+            {
+                id: 3,
+                title: "QR_code generator",
+                description: "A simple web-based QR Code Generator that allows users to input text or URLs and instantly generate a scannable QR code.",
+                image: "images/Qrcode.png",
+                technologies: ["JavaScript", "API Integration", "Html", "Css"],
+                liveUrl: "https://anish777-khatri.github.io/Qr-code-Generator/",
+                githubUrl: "https://github.com/Anish777-Khatri/Qr-code-Generator"
+            },
+            {
+                id: 4,
+                title: "Vowel Counter",
+                description: "A simple web-based Vowel Counter that analyzes user-input text and counts the total number of vowel letters (a, e, i, o, u).",
+                image: "images/vowel.png",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                liveUrl: "https://anish777-khatri.github.io/Vowel-letter/",
+                githubUrl: "https://github.com/Anish777-Khatri/Vowel-letter"
+            },
+            {
+                id: 5,
+                title: "Bg changer",
+                description: "A simple React app that dynamically changes the background color using React hooks and Tailwind CSS.",
+                image: "images/bg.png",
+                technologies: ["React", "JSX", "JavaScript", "Tailwind CSS","CSS"],
+                liveUrl: "https://anish777-khatri.github.io/bgchanger/",
+                githubUrl: "https://github.com/Anish777-Khatri/bgchanger"
+            },
+            {
+                id: 6,
+                title: "TextUtils_App",
+                description: "A simple text converter with uppercase/lowercase transformation and dark/light theme toggle.",
+                image: "images/textConv.png",
+                technologies: ["JavaScript", "HTML", "JSX", "CSS","React Router DOM","Bootstrap","React Testing Library"],
+                liveUrl: " https://anish777-khatri.github.io/react_app/",
+                githubUrl: "https://github.com/Anish777-Khatri/react_app"
+            }
+        ];
+
+        // Function to create project card HTML
+        function createProjectCard(project) {
+            return `
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="${project.image}" alt="${project.title}">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">${project.title}</h3>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-tech">
+                            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            <a href="${project.liveUrl}" class="project-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="${project.githubUrl}" class="project-btn github" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to load projects
+        function loadProjects() {
+            const projectsGrid = document.getElementById('projectsGrid');
+            if (projectsGrid) {
+                projectsGrid.innerHTML = projects.map(project => createProjectCard(project)).join('');
+            }
+        }
+
+        // Function to filter projects by technology
+        function filterProjects(technology) {
+            const filteredProjects = projects.filter(project => 
+                project.technologies.some(tech => tech.toLowerCase() === technology.toLowerCase())
+            );
+            
+            const projectsGrid = document.getElementById('projectsGrid');
+            if (projectsGrid) {
+                projectsGrid.innerHTML = filteredProjects.map(project => createProjectCard(project)).join('');
+            }
+        }
+
+        // Function to show all projects
+        function showAllProjects() {
+            loadProjects();
+        }
+
+        // Function to add skill level animation
+        function animateSkillLevels() {
+            const skillItems = document.querySelectorAll('.skill-item');
+            skillItems.forEach(item => {
+                const level = item.querySelector('.skill-level');
+                if (level) {
+                    const levelText = level.textContent;
+                    level.style.opacity = '0';
+                    level.style.transform = 'translateX(20px)';
+                    
+                    setTimeout(() => {
+                        level.style.transition = 'all 0.5s ease';
+                        level.style.opacity = '1';
+                        level.style.transform = 'translateX(0)';
+                    }, 100);
+                }
+            });
+        }
+
+        // Function to add hover effects to project cards
+        function addProjectHoverEffects() {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                    card.style.boxShadow = '0 15px 30px rgba(0, 124, 237, 0.3)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+                });
+            });
+        }
+
+        // Function to initialize the page
+        function initializePage() {
+            // Load projects
+            loadProjects();
+            
+            // Add hover effects to project cards
+            addProjectHoverEffects();
+            
+            // Animate skill levels
+            animateSkillLevels();
+            
+            // Add click event to navigation links
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Get the link text
+                    const linkText = this.textContent.toLowerCase();
+                    
+                    // Handle different navigation options
+                    if (linkText === 'projects') {
+                        showAllProjects();
+                        document.querySelector('.projects-section').scrollIntoView({ behavior: 'smooth' });
+                    } else if (linkText === 'about') {
+                        document.querySelector('.skills-section').scrollIntoView({ behavior: 'smooth' });
+                    } else if (linkText === 'contact') {
+                        // In a real app, this would navigate to contact page
+                        alert('Contact page would open here');
+                    }
+                });
+            });
+            
+            // Add filter functionality (example for demonstration)
+            console.log('Use filterProjects("React") to show React projects');
+            console.log('Use showAllProjects() to show all projects');
+        }
+
+        // Initialize the page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+
+        // Make functions available globally for demonstration
+        window.filterProjects = filterProjects;
+        window.showAllProjects = showAllProjects;
+    </script>
+            </div>
+            </div>
+</body>
+</html>
