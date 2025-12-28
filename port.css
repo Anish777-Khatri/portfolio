@@ -27,29 +27,49 @@ header{
     align-items: center;
     flex-wrap: wrap;
 }
+
+/* Enhanced Logo Styles */
 .logo{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+.logo:hover{
+    transform: translateY(-3px);
 }
 .logo i{
     height: 45px;
     width:45px;
-    background-color: #007ced;
+    background-color: #fff;
     border-radius: 50%;
-    color: #fff;
+    color: #070101ff;
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
     margin-right: 5px;
     cursor: pointer;
     text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+.logo i:hover{
+    background: linear-gradient(135deg, #007ced, #00c6ff);
+    color: #fff;
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 124, 237, 0.4);
 }
 .logo .logo-text{
-    font-family: 24px;
+    font-size: 24px;
     font-weight: 500;
     color: #fff;
+    transition: color 0.3s ease;
 }
+.logo:hover .logo-text{
+    color: #007ced;
+}
+
+/* Toggle Button Styles */
 nav .togglebtn{
     width: 35px;
     height: 35px;
@@ -59,16 +79,25 @@ nav .togglebtn{
     z-index: 5;
     cursor: pointer;
     display: none;
+    transition: transform 0.3s ease;
+}
+nav .togglebtn:hover{
+    transform: scale(1.1);
 }
 nav .togglebtn span{
     display: block;
-    background-color: #007ced;
+    background-color: #fff;
     margin: 5px 0px;
     width: 100%;
     height: 3px;
-    transition: 0.3sec;
-    transition-property: transform, opacity;
+    transition: 0.3s;
+    transition-property: transform, opacity, background-color;
 }
+nav .togglebtn:hover span{
+    background-color: #007ced;
+}
+
+/* Enhanced Navigation Styles */
 nav .navlink {
     list-style-type: none;
 }
@@ -78,31 +107,97 @@ nav .navlink li{
 nav .navlink li a{
     color: #e5e5e5;
     margin-right: 2.5rem;
+    position: relative;
+    padding: 8px 0;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
+
+/* Enhanced Navbar Hover Effect */
+nav .navlink li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, #e5e5e5);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 124, 237, 0.5);
+}
+
+nav .navlink li a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+nav .navlink li a:hover::after {
+    width: 100%;
+}
+
+/* Active Link Style */
+nav .navlink li a.active {
+    color: #ffffff;
+}
+
+nav .navlink li a.active::after {
+    width: 100%;
+}
+
+/* Container Styles */
 .container{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
+
+/* Enhanced Profile Picture */
 .container .hero-pic{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     overflow: hidden;
     border: 15px solid #444;
     box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    margin-top: -30px;
+}
+.container .hero-pic::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(226, 239, 250, 0), rgba(230, 237, 239, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+.container .hero-pic:hover::before{
+    opacity: 1;
+}
+.container .hero-pic:hover{
+    border-color: #007ced;
+    box-shadow: 0 10px 40px rgba(0, 124, 237, 0.4);
+    transform: translateY(-10px);
 }
 .hero-pic img{
-    height:  100%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center; 
-    transition: 0.5s;
+    transition: transform 0.5s ease;
 }
-.hero-pic img:hover{
-    transform: scale(1.5);
+.hero-pic:hover img{
+    transform: scale(1.2);
 }
+
+/* Hero Text Styles */
 .hero-text{
     max-width: 500px;
     display: flex;
@@ -113,18 +208,36 @@ nav .navlink li a{
     font-size: 14px;   
 }
 .hero-text h5 span{
-    color: #007ced;
+    color: #fff;
     font-size: 16px;
 }
 .hero-text h1{
-    color: #007ced;
+    color: #fff;
     font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff, #c8ccd0ff, #00c6ff, #fff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease, gradientShift 3s ease infinite;
+    position: relative;
+    display: inline-block;
 }
 .hero-text p{
     color: #e5e5e5;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease;
 }
+
+/* Enhanced Button Group */
 .btn-group{
     margin: 45px 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 .btn-group .btn{
     border-color: #d5d5d5;
@@ -132,31 +245,120 @@ nav .navlink li a{
     background-color: #333;
     padding: 12px 25px;
     margin: 5px 0;
-    margin-right: 7px;
     border-radius: 30px;
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 500;
+    z-index: 1;
 }
+
+/* Button Shine Effect */
+.btn-group .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+.btn-group .btn:hover::before{
+    left: 100%;
+}
+
+/* Button Hover Effects */
+.btn-group .btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0, 124, 237, 0.4);
+    border-color: #007ced;
+    color: #fff;
+    background: linear-gradient(135deg, #007ced, #00c6ff);
+}
+
+.btn-group .btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px rgba(0, 124, 237, 0.3);
+}
+
+/* Active Button Style */
 .btn.active{
-   border-color: #007ced; 
+    border-color: #007ced;
+    background: linear-gradient(135deg, #007ced, #00c6ff);
+}
+.btn.active:hover{
+    background: linear-gradient(135deg, #0066cc, #0099dd);
+}
+
+/* Enhanced Social Icons */
+.hero-text .social{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.hero-text .social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    border: 2px solid #444;
+    transition: all 0.4s ease;
+}
+.hero-text .social a:hover{
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #007ced, #00c6ff);
+    border-color: #007ced;
+    box-shadow: 0 10px 20px rgba(0, 124, 237, 0.4);
 }
 .hero-text .social i{
     color: #e5e5e5;
-    font-size:18px;
-    margin-right: 10px;
-    transition: 0.5s;
+    font-size: 18px;
+    transition: all 0.4s ease;
 }
-.hero-text .social i:hover{
-    color:#007ced;
-    transform: rotate(360deg); 
+.hero-text .social a:hover i{
+    color: #fff;
+    transform: rotate(360deg) scale(1.2);
 }
-/* Responsiv design and displaying navbar for small screen */
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient Animation for Name */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive design */
 @media(max-width:930px)
 {
     nav .togglebtn{
         display: initial;
     }
-    /* for toggle button */
     .click{
         top: 45px;
     }
@@ -167,22 +369,21 @@ nav .navlink li a{
     .click span:first-child{
         transform: rotate(-45deg);
     }
-    .click span:nth-child(2)
-    {
-        opacity:0;
-        margin:0;
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
     }
     .click span:last-child{
         transform: rotate(45deg);
-        top:0;
+        top: 0;
     }
     nav .navlink{
         position: absolute;
-        top:110px;
+        top: 110px;
         right: -100%;
-        bottom:0;
-        width:60%;
-        height:100vh;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
         background-color: #222;
         z-index: 3;
         box-shadow: 5px 13px 30px rgba(0 0 0 1);
@@ -193,20 +394,55 @@ nav .navlink li a{
         display: block;
     }
     nav .navlink li a{
-      display: block;
-      margin-bottom: 15px;
-      text-align: center;  
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+        margin-right: 0;
+        padding: 12px 20px;
+    }
+    nav .navlink li a:hover{
+        background-color: rgba(0, 124, 237, 0.1);
+        border-radius: 8px;
     }
     nav .navlink.open{
         right: 0;
     }
 }
+
 @media(max-width:768px){
     .container{
         flex-direction: column;
         padding-top: 2rem;
     }
     .hero-text{
-        padding:40px 0px;
+        padding: 40px 0px;
+        text-align: center;
+    }
+    .hero-text h1{
+        font-size: 2.5rem;
+    }
+    .btn-group{
+        justify-content: center;
+    }
+    .hero-text .social{
+        justify-content: center;
     }
 }
+
+@media(max-width:480px){
+    .hero-text h1{
+        font-size: 2rem;
+    }
+    .container .hero-pic{
+        width: 280px;
+        height: 280px;
+    }
+}
+
+
+
+
+
+
+
+

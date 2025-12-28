@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Anish Khatri</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .skills-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        .skills-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .skills-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 8px;
+            border: 3px solid #fff;
+            display: inline-block;
+            padding: 15px 60px;
+            background: transparent;
+            color: #fff;
+        }
+
+        .skills-section {
+            margin-bottom: 80px;
+        }
+
+        .skills-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px 40px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-icon i {
+            font-size: 5rem;
+        }
+
+        .html-icon { color: #e34c26; }
+        .css-icon { color: #264de4; }
+        .sass-icon { color: #cc6699; }
+        .js-icon { 
+            background: #f0db4f;
+            color: #000;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 3rem;
+            font-family: Arial, sans-serif;
+        }
+        .react-icon { color: #61dafb; }
+        .bootstrap-icon { color: #7952b3; }
+        .git-icon { color: #f34f29; }
+        .figma-icon { 
+            background: linear-gradient(180deg, #ff7262 0%, #ff7262 25%, #a259ff 25%, #a259ff 50%, #1abcfe 50%, #1abcfe 75%, #0acf83 75%, #0acf83 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Next.js Icon Styling */
+        .nextjs-icon { 
+            color: #fff;
+            background: #000;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 2.5rem;
+            font-family: 'Segoe UI', sans-serif;
+            border: 3px solid #fff;
+        }
+        
+        .mysql-icon { color: #00758f; }
+        
+        /* Redux Toolkit Icon Styling */
+        .redux-icon { 
+            color: #764abc;
+        }
+        
+        .cpp-icon { color: #00599c; }
+        .c-icon { color: #a8b9cc; }
+        
+        /* OOP Icon Styling */
+        .oop-icon {
+            color: #61dafb;
+            font-size: 4.5rem;
+        }
+
+        .skill-name {
+            font-size: 0.95rem;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px 40px;
+        }
+
+        .language-card {
+            text-align: center;
+        }
+
+        .flag-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .spain-flag {
+            background: linear-gradient(to bottom, #AA151B 0%, #AA151B 33%, #F1BF00 33%, #F1BF00 66%, #AA151B 66%, #AA151B 100%);
+        }
+
+        .language-level {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid,
+            .language-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 20px;
+            }
+
+            .skills-header h1 {
+                font-size: 2rem;
+                padding: 12px 30px;
+                letter-spacing: 4px;
+            }
+
+            .skills-container {
+                padding: 80px 20px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid,
+            .language-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Anish Khatri</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlink">
+                        <li><a href="index.html">Home</a></li> 
+                        <li><a href="project.html">Project</a></li> 
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="Resume.html">Resume</a></li> 
+                        <li><a href="contact.html">Contact</a></li> 
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="skills-container">
+                <div class="skills-header">
+                    <h1>SKILLS</h1>
+                </div>
+
+                <!-- Using Now Section -->
+                <div class="skills-section">
+                    <h2>USING NOW:</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-html5 html-icon"></i>
+                            </div>
+                            <div class="skill-name">HTML</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-css3-alt css-icon"></i>
+                            </div>
+                            <div class="skill-name">CSS</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon js-icon">
+                                JS
+                            </div>
+                            <div class="skill-name">JAVASCRIPT</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-react react-icon"></i>
+                            </div>
+                            <div class="skill-name">REACT</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-bootstrap bootstrap-icon"></i>
+                            </div>
+                            <div class="skill-name">BOOTSTRAP</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-git-alt git-icon"></i>
+                            </div>
+                            <div class="skill-name">GIT</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-figma figma-icon"></i>
+                            </div>
+                            <div class="skill-name">FIGMA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Section -->
+                <div class="skills-section">
+                    <h2>LEARNING:</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon nextjs-icon">
+                                N
+                            </div>
+                            <div class="skill-name">NEXT.JS</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-database mysql-icon"></i>
+                            </div>
+                            <div class="skill-name">MySQL</div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-react redux-icon"></i>
+                            </div>
+                            <div class="skill-name">REDUX TOOLKIT</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Skills Section -->
+                <div class="skills-section">
+                    <h2>OTHER SKILLS:</h2>
+                    <div class="language-grid">
+                        <div class="language-card">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-cubes oop-icon"></i>
+                            </div>
+                            <div class="skill-name">OOP</div>
+                        </div>
+                        
+                        <div class="language-card">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-code cpp-icon"></i>
+                            </div>
+                            <div class="skill-name">C++</div>
+                        </div>
+
+                        <div class="language-card">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-c c-icon"></i>
+                            </div>
+                            <div class="skill-name">C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlink");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

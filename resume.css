@@ -27,28 +27,46 @@ header{
     align-items: center;
     flex-wrap: wrap;
 }
+
+/* Enhanced Logo Styles */
 .logo{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+.logo:hover{
+    transform: translateY(-3px);
 }
 .logo i{
     height: 45px;
     width:45px;
-    background-color: #007ced;
+    background-color: #fff;
     border-radius: 50%;
-    color: #fff;
+    color: #070101ff;
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
     margin-right: 5px;
     cursor: pointer;
     text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+.logo i:hover{
+    background: linear-gradient(135deg, #007ced, #00c6ff);
+    color: #fff;
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 124, 237, 0.4);
 }
 .logo .logo-text{
-    font-family: 24px;
+    font-size: 24px;
     font-weight: 500;
     color: #fff;
+    transition: color 0.3s ease;
+}
+.logo:hover .logo-text{
+    color: #007ced;
 }
 nav .togglebtn{
     width: 35px;
@@ -59,16 +77,25 @@ nav .togglebtn{
     z-index: 5;
     cursor: pointer;
     display: none;
+    transition: transform 0.3s ease;
+}
+nav .togglebtn:hover{
+    transform: scale(1.1);
 }
 nav .togglebtn span{
     display: block;
-    background-color: #007ced;
+    background-color: #fff;
     margin: 5px 0px;
     width: 100%;
     height: 3px;
-    transition: 0.3sec;
-    transition-property: transform, opacity;
+    transition: 0.3s;
+    transition-property: transform, opacity, background-color;
 }
+nav .togglebtn:hover span{
+    background-color: #007ced;
+}
+
+/* Enhanced Navigation Styles */
 nav .navlink {
     list-style-type: none;
 }
@@ -78,89 +105,133 @@ nav .navlink li{
 nav .navlink li a{
     color: #e5e5e5;
     margin-right: 2.5rem;
+    position: relative;
+    padding: 8px 0;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
+
+/* Enhanced Navbar Hover Effect */
+nav .navlink li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, #e5e5e5);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 124, 237, 0.5);
+}
+
+nav .navlink li a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+nav .navlink li a:hover::after {
+    width: 100%;
+}
+
+/* Active Link Style */
+nav .navlink li a.active {
+    color: #ffffff;
+}
+
+nav .navlink li a.active::after {
+    width: 100%;
+}
+/* Image Content Section */
 .image-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-        }
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
 
-        .image-wrapper {
-            max-width: 800px;
-            width: 100%;
-            text-align: center;
-        }
+.image-wrapper {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
 
-        .resume-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-        }
+.resume-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
 
-        .resume-image:hover {
-            transform: scale(1.01);
-        }
+.resume-image:hover {
+    transform: scale(1.01);
+}
 
-        /* Footer */
-        footer {
-            background-color: #222;
-            padding: 30px 0;
-            border-top: 1px solid #333;
-        }
+/* Footer */
+footer {
+    background-color: #222;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+}
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .copyright {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
+.copyright {
+    color: #aaa;
+    font-size: 0.9rem;
+}
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
+.social-links {
+    display: flex;
+    gap: 15px;
+}
 
-        .social-link {
-            color: #e5e5e5;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
+.social-link {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
 
-        .social-link:hover {
-            color: #007ced;
-        }
+.social-link:hover {
+    color: #007ced;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 15px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+    
+    nav .navlink li a {
+        margin-right: 1.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
 
-        @media (max-width: 480px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-        
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav .navlink li a {
+        margin-right: 1rem;
+    }
+}
